@@ -1,3 +1,7 @@
+'use strict';
+
+ConfigRouter.$inject = ['$stateProvider', '$urlRouterProvider'];
+
 function ConfigRouter($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise("/home");
 
@@ -17,6 +21,7 @@ function ConfigRouter($stateProvider, $urlRouterProvider) {
 
     $stateProvider.state(home);
     $stateProvider.state(dashboard);
-}
+};
 
-angular.module('history-app').config(ConfigRouter);
+// angular.module('history-app').config(ConfigRouter);
+module.exports = ConfigRouter;

@@ -1,3 +1,6 @@
-/**
- * Created by I323506 on 01/09/2018.
- */
+'use strict';
+
+var angular = require('angular');
+
+angular.module("history-app")
+    .controller('DashboardController', require("./controllers/DashboardController"));
