@@ -1,0 +1,17 @@
+{
+  "name": "history-app",
+  "version": "1.0.0",
+  "description": "This web app will display historical documents which users can search for and read",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Octavian Morcov",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.7.3",
+    "angular-ui-router": "^1.0.20",
+    "babel-polyfill": "^6.26.0",
+    "webpack": "^4.17.1"
+  }
+}
