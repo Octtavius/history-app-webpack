@@ -1,5 +1,5 @@
 'use strict';
-
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 var config = {
     context: __dirname + "/web-app",
     entry: {
@@ -24,8 +24,9 @@ var config = {
                 exclude: /node_modules/,
                 loader: 'raw-loader'
             }
-        ]// TAHT WAS THE MAGIC
+        ]// THAT WAS THE MAGIC
     },
+    devtool: "source-map",
     optimization: {
         splitChunks: {
             chunks: "all",
@@ -41,7 +42,14 @@ var config = {
                 }
             }
         }
-    }
+    },
+    plugins: [
+        new HtmlWebpackPlugin({ // generate the index.html
+            template: './index.html',
+            inject: 'body', // where to insert the js references
+            filename: "../web-app/generated-index.html" // where to create the file. default is in folder where bundles are created
+        })
+    ]
 };
 
 module.exports = config;
