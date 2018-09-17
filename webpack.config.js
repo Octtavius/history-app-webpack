@@ -3,12 +3,12 @@
 var config = {
     context: __dirname + "/web-app",
     entry: {
-        app: "./index",
-        vendor: ["angular", "angular-ui-router"]
+        // vendor: ["angular", "angular-ui-router"],
+        app: "./index"
     },
     output: {
         path: __dirname + "/bundles",
-        filename: "[name].bundle.js"
+        filename: "[name].[chunkhash].bundle.js"
     },
     module: {
         rules: [
@@ -25,6 +25,22 @@ var config = {
                 loader: 'raw-loader'
             }
         ]// TAHT WAS THE MAGIC
+    },
+    optimization: {
+        splitChunks: {
+            chunks: "all",
+            cacheGroups: {
+                vendors: { //  name of the group. Create a vendors chunk, which includes all code from node_modules in the whole application.
+                    test: /[\\/]node_modules[\\/]/,
+                    priority: -10
+                },
+                default: {
+                    minChunks: 2,
+                    priority: -20,
+                    reuseExistingChunk: true
+                }
+            }
+        }
     }
 };
 

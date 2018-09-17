@@ -13,6 +13,7 @@
     "angular": "^1.7.3",
     "angular-ui-router": "^1.0.20",
     "babel-polyfill": "^6.26.0",
+    "oclazyload": "^1.1.0",
     "webpack": "^4.17.1"
   },
   "devDependencies": {
