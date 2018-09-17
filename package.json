@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "bundle-dev": "webpack --watch --open --config webpack.dev.js",
-    "bundle-prod": "webpack --watch --config webpack.prod.js"
+    "bundle-prod": "webpack --config webpack.prod.js"
   },
   "author": "Octavian Morcov",
   "license": "ISC",

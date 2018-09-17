@@ -4,6 +4,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = merge(common, {
     mode: 'development',
+    devtool: "cheap-eval-source-map",
     plugins: [
         new HtmlWebpackPlugin({ // generate the index.html
             template: './index-template.html',

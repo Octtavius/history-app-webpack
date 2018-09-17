@@ -26,7 +26,6 @@ var config = {
             }
         ]// THAT WAS THE MAGIC
     },
-    devtool: "source-map",
     optimization: {
         splitChunks: {
             chunks: "all",
