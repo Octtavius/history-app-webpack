@@ -33,13 +33,9 @@ var config = {
                 vendors: { //  name of the group. Create a vendors chunk, which includes all code from node_modules in the whole application.
                     test: /[\\/]node_modules[\\/]/,
                     priority: -10
-                },
-                default: {
-                    minChunks: 2,
-                    priority: -20,
-                    reuseExistingChunk: true
                 }
-            }
+            },
+            minSize: 0
         }
     }
 };
