@@ -3,4 +3,5 @@
 var angular = require('angular');
 
 angular.module("history-app")
-    .controller('DashboardController', require("./controllers/DashboardController"));
+    .controller('DashboardController', require("./controllers/DashboardController"))
+    .factory("displayService", require("../shared/DisplayService"));

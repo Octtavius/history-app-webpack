@@ -8,7 +8,7 @@ var config = {
     },
     output: {
         path: __dirname + "/bundles",
-        filename: "[name].[chunkhash].bundle.js"
+        filename: "[name].bundle.js"
     },
     module: {
         rules: [
@@ -29,9 +29,15 @@ var config = {
     optimization: {
         splitChunks: {
             chunks: "all",
-            cacheGroups: {
+            cacheGroups: { // REMEMBER, webpack  reads lines from right to left and bottom to top. utilities must be first.
+                utilities: {
+                    test: /[\\/]web-app[\\/]shared[\\/]/,
+                    minSize: 0,
+                    priority: -11
+                },
                 vendors: { //  name of the group. Create a vendors chunk, which includes all code from node_modules in the whole application.
-                    test: /[\\/]node_modules[\\/]/,
+                    // test: /[\\/]node_modules[\\/]/,
+                    test: /angular|angular-ui-router/,
                     priority: -10
                 }
             }

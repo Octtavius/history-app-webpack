@@ -1,10 +1,11 @@
 'use strict';
 
-function ViewController($scope) {
-    $scope.title = "View Page"
+function ViewController($scope, displayService) {
+    $scope.title = "View Page";
+    displayService.printM();
 };
 
-ViewController.$inject = ['$scope'];
+ViewController.$inject = ['$scope', 'displayService'];
 
 // angular.module('history-app').controller('ViewController', ViewController);
 module.exports = ViewController;
