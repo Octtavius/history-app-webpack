@@ -3,7 +3,7 @@
 var config = {
     context: __dirname + "/web-app",
     entry: {
-        // vendor: ["angular", "angular-ui-router"],
+        // vendors: ["angular", "angular-ui-router"],
         app: "./index"
     },
     output: {
@@ -34,8 +34,7 @@ var config = {
                     test: /[\\/]node_modules[\\/]/,
                     priority: -10
                 }
-            },
-            minSize: 0
+            }
         }
     }
 };
