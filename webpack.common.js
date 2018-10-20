@@ -37,7 +37,7 @@ var config = {
                 },
                 vendors: { //  name of the group. Create a vendors chunk, which includes all code from node_modules in the whole application.
                     // test: /[\\/]node_modules[\\/]/,
-                    test: /angular|angular-ui-router/,
+                    test: /node_modules|angular|angular-ui-router/,
                     priority: -10
                 }
             }
